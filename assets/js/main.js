@@ -1,191 +1,103 @@
-/**
-* Template Name: MyResume - v2.1.0
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-!(function($) {
-  "use strict";
+const EN = {
+  skip: "Skip to content",
+  nav1: "about", nav2: "experience", nav3: "capabilities", nav4: "contact",
+  kicker: "— senior backend developer · java / spring · 12 years",
+  heroP1: "I build and modernize backends that are already in production: services in Java and Spring Boot, legacy system migration, and automation of the processes a business actually runs on.",
+  heroP2: "I currently work at Hey Banco, in a regulated banking environment. Before that: retail, transport and manufacturing — where the work almost always started with a system that could no longer keep up.",
+  cta1: "contact →",
+  h2sobre: "01 / about me",
+  sobreP1: "I'm a computer engineer and I've spent twelve years on the backend side. I started supporting legacy systems in manufacturing and ended up designing the architecture other teams ship on: containers, continuous integration and static analysis as part of the normal flow, not as a side project.",
+  sobreP2: "Java and Spring are my specialty, but the work I care about is translating a real operation — billing, sales, internal processes — into services people can understand and maintain. That includes automating what is still done by hand and carefully dismantling what shouldn't be standing anymore.",
+  sobreP3: "I've also led small teams and coordinated projects: requirements gathering, technical decisions alongside the business, and vendor selection.",
+  dt1: "currently", dt2: "based in", dd2: "Tlaxcala, Mexico", dt3: "languages", dd3: "Spanish · technical English",
+  h2exp: "02 / experience",
+  exp1d: "2023 → now", exp1r: "Senior Backend Developer",
+  exp1b1: "Backend development in Java and Spring Boot inside a regulated banking environment, with the controls and traceability that demands.",
+  exp1b2: "Vulnerability remediation on production services and dependency hardening.",
+  exp1b3: "Modernization of legacy systems into maintainable services, without interrupting the operation.",
+  exp2r: "Software Developer",
+  exp2b1: "Development and maintenance of the sales-flow orchestration project.",
+  exp2b2: "Integration between commerce services and internal operations systems.",
+  exp3r: "Senior Software Analyst & Developer · Puebla",
+  exp3b1: "Proposed and implemented a DevOps-based development architecture that became the area's standard.",
+  exp3b2: "Led the development team and project management: unification of sales platforms, invoicing provider migration, and the travel-package sales site.",
+  exp3b3: "Technical support to the business on project decisions and vendor selection, plus legacy system support.",
+  exp4r: "Business Process Analyst & Developer · Monterrey",
+  exp4b1: "Owned the BPM area: migration and automation of business processes on IBM BPM.",
+  exp4b2: "Designed and implemented a container-based architecture for new development.",
+  exp5r: "Software Developer · Nuevo León",
+  exp5b1: "End-to-end analysis, design and implementation of the chassis component management module.",
+  exp5b2: "Migration of the desktop platform to web, plus support for existing systems.",
+  exp6r: "Software Developer (intern) · Tlaxcala",
+  exp6b1: "Requirements gathering, use cases and database design for the performance review module.",
+  h2cap: "03 / technical capabilities",
+  cap3: "data", cap3v: "Oracle · SQL Server · DB2 · MySQL · relational modeling · schema migrations",
+  cap5: "applied ai", cap5v: "Computer vision and pattern recognition applied to medical diagnosis · image processing",
+  h2edu: "04 / education and honors",
+  mencion: "thesis honorable mention",
+  tesisT: "Computer vision applied to the diagnosis of chronic granulocytic leukemia",
+  tesisP: "Pattern recognition over laboratory images to support identification of the disease. Also presented as <em>Pattern Recognition Applied to Identification of Chronic Granulocytic Leukemia</em>.",
+  uatx: "Universidad Autónoma de Tlaxcala · Distributed Systems · 2009–2013",
+  bach: "Accounting Technician",
+  h2cert: "certifications",
+  cert1: "Java Fundamentals", cert3: "Microservices", cert4: "SCRUM", cert5: "Big Data",
+  cert6: "Introduction to the Terminal and Command Line",
+  h2cont: "05 / contact",
+  contT: "If you have a backend that needs rescuing, or a role that fits, get in touch.",
+  cvBtn: "download CV (PDF)",
+  footerR: "Tlaxcala, Mexico · static site on GitHub Pages"
+};
 
-  // Preloader
-  $(window).on('load', function() {
-    if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function() {
-        $(this).remove();
-      });
-    }
-  });
+(function () {
+  var root = document.documentElement;
+  var store = {
+    get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  };
 
-  // Hero typed
-  if ($('.typed').length) {
-    var typed_strings = $(".typed").data('typed-items');
-    typed_strings = typed_strings.split(',')
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
+  // Theme
+  var theme = store.get('ediaz-theme');
+  if (!theme) theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  setTheme(theme);
+  function setTheme(t) {
+    root.setAttribute('data-theme', t);
+    store.set('ediaz-theme', t);
+    var b = document.getElementById('themeBtn');
+    if (b) b.textContent = t === 'dark' ? '☀' : '☾';
   }
 
-  // Smooth scroll for the navigation menu and links with .scrollto classes
-  $(document).on('click', '.nav-menu a, .scrollto', function(e) {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      if (target.length) {
-        e.preventDefault();
-
-        var scrollto = target.offset().top;
-
-        $('html, body').animate({
-          scrollTop: scrollto
-        }, 1500, 'easeInOutExpo');
-
-        if ($(this).parents('.nav-menu, .mobile-nav').length) {
-          $('.nav-menu .active, .mobile-nav .active').removeClass('active');
-          $(this).closest('li').addClass('active');
-        }
-
-        if ($('body').hasClass('mobile-nav-active')) {
-          $('body').removeClass('mobile-nav-active');
-          $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-        }
-        return false;
-      }
-    }
-  });
-
-  // Activate smooth scroll on page load with hash links in the url
-  $(document).ready(function() {
-    if (window.location.hash) {
-      var initial_nav = window.location.hash;
-      if ($(initial_nav).length) {
-        var scrollto = $(initial_nav).offset().top;
-        $('html, body').animate({
-          scrollTop: scrollto
-        }, 1500, 'easeInOutExpo');
-      }
-    }
-  });
-
-  $(document).on('click', '.mobile-nav-toggle', function(e) {
-    $('body').toggleClass('mobile-nav-active');
-    $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-  });
-
-  $(document).click(function(e) {
-    var container = $(".mobile-nav-toggle");
-    if (!container.is(e.target) && container.has(e.target).length === 0) {
-      if ($('body').hasClass('mobile-nav-active')) {
-        $('body').removeClass('mobile-nav-active');
-        $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-      }
-    }
-  });
-
-  // Navigation active state on scroll
-  var nav_sections = $('section');
-  var main_nav = $('.nav-menu, #mobile-nav');
-
-  $(window).on('scroll', function() {
-    var cur_pos = $(this).scrollTop() + 300;
-
-    nav_sections.each(function() {
-      var top = $(this).offset().top,
-        bottom = top + $(this).outerHeight();
-
-      if (cur_pos >= top && cur_pos <= bottom) {
-        if (cur_pos <= bottom) {
-          main_nav.find('li').removeClass('active');
-        }
-        main_nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('active');
-      }
-      if (cur_pos < 200) {
-        $(".nav-menu ul:first li:first").addClass('active');
-      }
+  // Language
+  var es = {};
+  document.querySelectorAll('[data-i18n]').forEach(function (n) { es[n.getAttribute('data-i18n')] = n.innerHTML; });
+  function setLang(l) {
+    root.setAttribute('lang', l);
+    store.set('ediaz-lang', l);
+    document.querySelectorAll('[data-i18n]').forEach(function (n) {
+      var k = n.getAttribute('data-i18n');
+      var v = l === 'en' ? (EN[k] || es[k]) : es[k];
+      if (v != null) n.innerHTML = v;
     });
-  });
-
-  // Back to top button
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn('slow');
-    } else {
-      $('.back-to-top').fadeOut('slow');
-    }
-  });
-
-  $('.back-to-top').click(function() {
-    $('html, body').animate({
-      scrollTop: 0
-    }, 1500, 'easeInOutExpo');
-    return false;
-  });
-
-  // jQuery counterUp
-  $('[data-toggle="counter-up"]').counterUp({
-    delay: 10,
-    time: 1000
-  });
-
-  // Skills section
-  $('.skills-content').waypoint(function() {
-    $('.progress .progress-bar').each(function() {
-      $(this).css("width", $(this).attr("aria-valuenow") + '%');
-    });
-  }, {
-    offset: '80%'
-  });
-
-  // Init AOS
-  function aos_init() {
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+    var b = document.getElementById('langBtn');
+    if (b) b.textContent = l === 'es' ? 'EN' : 'ES';
   }
+  setLang(store.get('ediaz-lang') === 'en' ? 'en' : 'es');
 
-  // Porfolio isotope and filter
-  $(window).on('load', function() {
-    var portfolioIsotope = $('.portfolio-container').isotope({
-      itemSelector: '.portfolio-item'
-    });
+  document.getElementById('themeBtn').addEventListener('click', function () {
+    setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  });
+  document.getElementById('langBtn').addEventListener('click', function () {
+    setLang(root.getAttribute('lang') === 'es' ? 'en' : 'es');
+  });
 
-    $('#portfolio-flters li').on('click', function() {
-      $("#portfolio-flters li").removeClass('filter-active');
-      $(this).addClass('filter-active');
-
-      portfolioIsotope.isotope({
-        filter: $(this).data('filter')
+  // Scroll reveal
+  if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('om-in'); io.unobserve(e.target); }
       });
-      aos_init();
-    });
-
-    // Initiate venobox (lightbox feature used in portofilo)
-    $('.venobox').venobox({
-      'share': false
-    });
-
-    // Initiate aos_init() function
-    aos_init();
-
-  });
-
-  // Testimonials carousel (uses the Owl Carousel library)
-  $(".testimonials-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
-  });
-
-  // Portfolio details carousel
-  $(".portfolio-details-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
-  });
-
-})(jQuery);
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    document.querySelectorAll('[data-reveal]').forEach(function (n) { io.observe(n); });
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach(function (n) { n.classList.add('om-in'); });
+  }
+})();

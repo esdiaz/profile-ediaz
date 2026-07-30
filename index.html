@@ -1,711 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es" data-theme="dark">
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Enrique Santamaría Díaz</title>
-    <meta content="" name="descriptison">
-    <meta content="" name="keywords">
-
-    <!-- Favicons -->
-    <link href="assets/img/web-page-icon.jpg" rel="icon">
-    <link href="assets/img/web-page-icon.jpg" rel="apple-touch-icon">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
-
-    <script>
-        function showOrHide() {
-            var x = document.getElementById("moreInfo");
-            var moreText = document.getElementById("moreText");
-            var lessText = document.getElementById("lessText");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-                lessText.style.display = "block";
-                moreText.style.display = "none";
-            } else {
-                x.style.display = "none";
-                lessText.style.display = "none";
-                moreText.style.display = "block";
-            }
-
-        }
-    </script>
-    <!-- =======================================================
-    * Template Name: MyResume - v2.1.0
-    * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enrique Santamaría Díaz — Desarrollador Backend Senior</title>
+<meta name="description" content="Desarrollador backend senior con 12 años de experiencia en Java y Spring: modernización de sistemas legacy, automatización de procesos y DevOps. Actualmente en Hey Banco.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Enrique Santamaría Díaz — Desarrollador Backend Senior">
+<meta property="og:description" content="12 años construyendo y modernizando backends en banca, retail y manufactura. Java, Spring Boot, contenedores y automatización.">
+<meta property="og:url" content="https://esdiaz.github.io/profile-ediaz/">
+<meta property="og:image" content="https://esdiaz.github.io/profile-ediaz/assets/img/enrique.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Enrique Santamaría Díaz — Desarrollador Backend Senior">
+<meta name="twitter:description" content="12 años construyendo y modernizando backends en banca, retail y manufactura.">
+<meta name="twitter:image" content="https://esdiaz.github.io/profile-ediaz/assets/img/enrique.jpg">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Enrique Santamaría Díaz","jobTitle":"Desarrollador Backend Senior","email":"mailto:santamariadiaze@gmail.com","url":"https://esdiaz.github.io/profile-ediaz/","image":"https://esdiaz.github.io/profile-ediaz/assets/img/enrique.jpg","address":{"@type":"PostalAddress","addressRegion":"Tlaxcala","addressCountry":"MX"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Universidad Autónoma de Tlaxcala"},"worksFor":{"@type":"Organization","name":"Hey Banco"},"knowsAbout":["Java","Spring Boot","Microservicios","Docker","Kubernetes","DevOps","Oracle"],"sameAs":["https://www.linkedin.com/in/enriquesantamariadiaz/","https://github.com/esdiaz"]}
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
+<div style="background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',system-ui,sans-serif;min-height:100vh">
 
-<!-- ======= Mobile nav toggle button ======= -->
-<button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+  <a href="#main" style="position:absolute;left:-9999px;top:0;padding:10px 16px;background:var(--accent);color:var(--accentInk);font-size:14px" class="h1" data-i18n="skip">Ir al contenido</a>
 
-<!-- ======= Header ======= -->
-<header id="header" class="d-flex flex-column justify-content-center">
-
-    <nav class="nav-menu">
-        <ul>
-            <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Inicio</span></a></li>
-            <li><a href="#about"><i class="bx bx-user"></i> <span>Acerca de</span></a></li>
-            <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Habilidades</span></a></li>
-            <li><a href="#portfolio"><i class="bx bx-book-content"></i> <span>Tecnologías</span></a></li>
-            <li><a href="#contact"><i class="bx bx-envelope"></i> <span>Contacto</span></a></li>
-        </ul>
-    </nav><!-- .nav-menu -->
-
-</header><!-- End Header -->
-
-<!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex flex-column justify-content-center">
-    <div class="container" data-aos="zoom-in" data-aos-delay="100">
-        <h1>Enrique Santamaría</h1>
-        <p>Soy <span class="typed" data-typed-items="Analista y Desarrollador de Software Senior, Fullstack Developer, Coordinador de proyectos"></span></p>
-        <div class="social-links">
-            <a href="https://twitter.com/Blue_kike" class="twitter"><i class="bx bxl-twitter"></i></a>
-            <a href="https://web.facebook.com/BluE.KikE" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="https://www.instagram.com/sd_enrique/" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="javascript:void(0);" class="google-plus" data-toggle="tooltip" title="blue_kike"><i class="bx bxl-skype"></i></a>
-            <a href="https://www.linkedin.com/in/enriquesantamariadiaz/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
+  <header style="position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)">
+    <div style="max-width:1120px;margin:0 auto;padding:14px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px">
+      <a href="#top" style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--text);letter-spacing:0.02em">esdiaz</a>
+      <nav aria-label="Secciones" style="display:flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:12.5px">
+        <a href="#sobre" style="padding:8px 11px;border-radius:3px;color:var(--muted)" class="h2" data-i18n="nav1">sobre</a>
+        <a href="#experiencia" style="padding:8px 11px;border-radius:3px;color:var(--muted)" class="h2" data-i18n="nav2">experiencia</a>
+        <a href="#capacidades" style="padding:8px 11px;border-radius:3px;color:var(--muted)" class="h2" data-i18n="nav3">capacidades</a>
+        <a href="#contacto" style="padding:8px 11px;border-radius:3px;color:var(--muted)" class="h2" data-i18n="nav4">contacto</a>
+        <span style="display:flex;gap:6px;margin-left:10px">
+          <button type="button" id="langBtn" aria-label="Cambiar idioma / Switch language" style="font-family:'IBM Plex Mono',monospace;font-size:12px;padding:7px 10px;background:transparent;border:1px solid var(--line2);border-radius:3px;color:var(--accent);cursor:pointer;min-width:38px" class="h3">EN</button>
+          <button type="button" id="themeBtn" aria-label="Cambiar tema / Switch theme" style="font-family:'IBM Plex Mono',monospace;font-size:12px;padding:7px 10px;background:transparent;border:1px solid var(--line2);border-radius:3px;color:var(--muted);cursor:pointer;min-width:38px" class="h4">☀</button>
+        </span>
+      </nav>
     </div>
-</section><!-- End Hero -->
+  </header>
 
-<main id="main">
+  <main id="main">
+    <div id="top" style="max-width:1120px;margin:0 auto;padding:0 28px 104px">
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Acerca de</h2>
-                <p>7 años de experiencia como analista y desarrollador de software, especialista en lenguaje de programación Java múltiples versiones, 2 años de experiencia como analista y desarrollador en automatización de procesos para negocio y 2 de años de experiencia en implementación de arquitectura para desarrollo ágil.</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4">
-                    <img src="assets/img/profile.jpg" class="img-fluid" style="border-radius: 15em;" alt="">
-                </div>
-                <div class="col-lg-8 pt-4 pt-lg-0 content">
-                    <h3>Analista & Desarrollador de Software Senior</h3>
-                    <div class="row margin-top">
-                        <div class="col-lg-6">
-                            <ul>
-                                <li><i class="icofont-rounded-right"></i> <strong>Fecha de nacimiento:</strong> 15 Julio 1991</li>
-                                <li><i class="icofont-rounded-right"></i> <strong>Website:</strong> blog.mypeh.com</li>
-                                <li><i class="icofont-rounded-right"></i> <strong>Telefono:</strong> 8122886263</li>
-                                <li><i class="icofont-rounded-right"></i> <strong>Ciudad:</strong> Tlaxcala, Tlax.</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul>
-                                <li><i class="icofont-rounded-right"></i> <strong>Edad:</strong> 29</li>
-                                <li><i class="icofont-rounded-right"></i> <strong>Grado de estudios:</strong> Ingeniería</li>
-                                <li><i class="icofont-rounded-right"></i> <strong>Correo:</strong> santamariadiaze@gmail.com</li>
-                                <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Disponible</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+      <section style="padding:clamp(64px,11vw,124px) 0 88px;border-bottom:1px solid var(--line)">
+        <p style="margin:0 0 28px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.04em;color:var(--accent)" data-i18n="kicker">— desarrollador backend senior · java / spring · 12 años</p>
+        <h1 style="margin:0;max-width:900px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(38px,6vw,74px);line-height:1.05;letter-spacing:-0.035em;text-wrap:balance">Enrique Santamaría Díaz</h1>
+        <p style="margin:26px 0 0;max-width:64ch;font-size:clamp(16.5px,2vw,18.5px);line-height:1.62;color:var(--muted);text-wrap:pretty" data-i18n="heroP1">Construyo y modernizo backends que ya están en producción: servicios en Java y Spring Boot, migración de sistemas legacy y la automatización de los procesos que sostienen la operación de un negocio.</p>
+        <p style="margin:16px 0 0;max-width:64ch;font-size:clamp(16.5px,2vw,18.5px);line-height:1.62;color:var(--muted);text-wrap:pretty" data-i18n="heroP2">Hoy trabajo en Hey Banco, en un entorno bancario regulado. Antes pasé por retail, transporte y manufactura, donde casi siempre el trabajo empezaba en un sistema que ya no aguantaba.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:40px;font-family:'IBM Plex Mono',monospace;font-size:13px">
+          <a href="#contacto" style="padding:13px 22px;background:var(--accent);color:var(--accentInk);border-radius:3px;font-weight:500" class="h5" data-i18n="cta1">contacto →</a>
+          <a href="https://www.linkedin.com/in/enriquesantamariadiaz/" rel="noopener" style="padding:13px 22px;border:1px solid var(--line2);border-radius:3px;color:var(--text)" class="h4">LinkedIn</a>
+          <a href="https://github.com/esdiaz" rel="noopener" style="padding:13px 22px;border:1px solid var(--line2);border-radius:3px;color:var(--text)" class="h4">GitHub</a>
         </div>
-    </section><!-- End About Section -->
+      </section>
 
-    <!-- ======= Facts Section =======-->
-    <section id="facts" class="facts">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Hechos</h2>
-                <p></p>
-            </div>
-
-            <div class="row">
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="count-box">
-                        <i class="icofont-repair"></i>
-                        <span data-toggle="counter-up">60</span>
-                        <p>Proyectos Backend</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-                    <div class="count-box">
-                        <i class="icofont-image"></i>
-                        <span data-toggle="counter-up">40</span>
-                        <p>Proyectos Frontend</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
-                    <div class="count-box">
-                        <i class="icofont-infinite"></i>
-                        <span data-toggle="counter-up">10</span>
-                        <p>Procesos BPM</p>
-                    </div>
-                </div>
-
-
-            </div>
-
+      <section id="sobre" data-reveal="1" style="padding:72px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(32px,5vw,72px);align-items:start">
+        <div>
+          <h2 style="margin:0 0 30px;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--dim)" data-i18n="h2sobre">01 / sobre mí</h2>
+          <p style="margin:0 0 18px;font-size:17px;line-height:1.68;color:var(--text);text-wrap:pretty" data-i18n="sobreP1">Soy ingeniero en computación y llevo doce años del lado del backend. Empecé dando soporte a sistemas legacy en manufactura y terminé diseñando la arquitectura con la que otros equipos entregan: contenedores, integración continua y análisis estático como parte del flujo normal, no como proyecto aparte.</p>
+          <p style="margin:0 0 18px;font-size:17px;line-height:1.68;color:var(--muted);text-wrap:pretty" data-i18n="sobreP2">Mi especialidad es Java y Spring, pero el trabajo que más me interesa es el de traducir una operación real —facturación, venta, procesos internos— a servicios que se entienden y se pueden mantener. Eso incluye automatizar lo que hoy se hace a mano y desmontar con cuidado lo que ya no debería seguir en pie.</p>
+          <p style="margin:0;font-size:17px;line-height:1.68;color:var(--muted);text-wrap:pretty" data-i18n="sobreP3">También he liderado equipos pequeños y coordinado proyectos: levantamiento de requerimientos, decisiones técnicas con negocio y selección de proveedores.</p>
         </div>
-    </section>
-    <!-- End Facts Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Habilidades</h2>
+        <div style="display:grid;gap:18px">
+          <img src="assets/img/enrique.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="Retrato de Enrique Santamaría Díaz" style="width:100%;max-width:340px;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;border-radius:4px;border:1px solid var(--line)">
+          <dl style="margin:0;display:grid;gap:14px;max-width:340px;font-size:14.5px">
+            <div style="display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding-top:14px">
+              <dt style="color:var(--dim);font-family:'IBM Plex Mono',monospace;font-size:12.5px" data-i18n="dt1">actualmente</dt>
+              <dd style="margin:0;text-align:right">Hey Banco</dd>
             </div>
-
-            <div class="row skills-content">
-
-                <div class="col-lg-12">
-
-                    <div class="progress">
-                        <span class="skill">DevOps <i class="val">80%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-
-                    <div class="progress">
-                        <span class="skill">Java <i class="val">100%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                    <div class="progress">
-                        <span class="skill">Springframework <i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                    <div class="progress">
-                        <span class="skill">Spring Boot <i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                    <div class="progress">
-                        <span class="skill">JPQL <i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4">
-
-                    <div class="progress">
-                        <span class="skill">Angular <i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                    <div class="progress">
-                        <span class="skill">Ionic <i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                    <div class="progress">
-                        <span class="skill">Javascript <i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                    <div class="progress">
-                        <span class="skill">Typescript <i class="val">75%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4">
-
-                    <div class="progress">
-                        <span class="skill">Docker <i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                    <div class="progress">
-                        <span class="skill">Gitlab y SonarQube<i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                    <div class="progress">
-                        <span class="skill">Jenkins <i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                    <div class="progress">
-                        <span class="skill">Nexus <i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                </div>
-
+            <div style="display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding-top:14px">
+              <dt style="color:var(--dim);font-family:'IBM Plex Mono',monospace;font-size:12.5px" data-i18n="dt2">base</dt>
+              <dd style="margin:0;text-align:right" data-i18n="dd2">Tlaxcala, México</dd>
             </div>
-
+            <div style="display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding-top:14px">
+              <dt style="color:var(--dim);font-family:'IBM Plex Mono',monospace;font-size:12.5px" data-i18n="dt3">idiomas</dt>
+              <dd style="margin:0;text-align:right" data-i18n="dd3">Español · Inglés técnico</dd>
+            </div>
+          </dl>
         </div>
-    </section><!-- End Skills Section -->
+      </section>
 
-    <!-- Modal -->
-    <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Proyectos</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <ul>
-                        <li>Integración de amenidad entre tecnologías Desktop/WEB</li>
-                        <li>Migración de proveedor de facturación</li>
-                        <li>Sitio de venta de paquetes de viaje</li>
-                        <li>Unificación de plataformas de venta</a></li>
-                    </ul>
-                </div>
-                <div class="modal-footer center">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
+      <section id="experiencia" data-reveal="1" style="padding:72px 0;border-bottom:1px solid var(--line)">
+        <h2 style="margin:0 0 34px;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--dim)" data-i18n="h2exp">02 / experiencia</h2>
+        <div style="display:grid">
+          <article style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 0;border-top:1px solid var(--line)">
+            <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)" data-i18n="exp1d">2023 → hoy</p>
+            <div>
+              <h3 style="margin:0 0 4px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em">Hey Banco</h3>
+              <p style="margin:0 0 14px;font-size:14px;color:var(--dim)" data-i18n="exp1r">Desarrollador Backend SR</p>
+              <ul style="margin:0;padding-left:17px;display:grid;gap:9px;font-size:16px;line-height:1.6;color:var(--muted)">
+                <li data-i18n="exp1b1">Desarrollo backend en Java y Spring Boot dentro de un entorno bancario regulado, con los controles y la trazabilidad que eso exige.</li>
+                <li data-i18n="exp1b2">Remediación de vulnerabilidades sobre servicios en producción y endurecimiento de dependencias.</li>
+                <li data-i18n="exp1b3">Modernización de sistemas legacy hacia servicios mantenibles, sin interrumpir la operación.</li>
+              </ul>
             </div>
+          </article>
+          <article style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 0;border-top:1px solid var(--line)">
+            <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--dim)">2022 — 2023</p>
+            <div>
+              <h3 style="margin:0 0 4px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em">Office Depot México</h3>
+              <p style="margin:0 0 14px;font-size:14px;color:var(--dim)" data-i18n="exp2r">Desarrollador de software</p>
+              <ul style="margin:0;padding-left:17px;display:grid;gap:9px;font-size:16px;line-height:1.6;color:var(--muted)">
+                <li data-i18n="exp2b1">Desarrollo y mantenimiento del proyecto de orquestación del flujo de venta.</li>
+                <li data-i18n="exp2b2">Integración entre los servicios de comercio y los sistemas de operación interna.</li>
+              </ul>
+            </div>
+          </article>
+          <article style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 0;border-top:1px solid var(--line)">
+            <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--dim)">2018 — 2022</p>
+            <div>
+              <h3 style="margin:0 0 4px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em">Grupo Estrella Roja</h3>
+              <p style="margin:0 0 14px;font-size:14px;color:var(--dim)" data-i18n="exp3r">Analista y desarrollador de software senior · Puebla</p>
+              <ul style="margin:0;padding-left:17px;display:grid;gap:9px;font-size:16px;line-height:1.6;color:var(--muted)">
+                <li data-i18n="exp3b1">Propuse e implementé una arquitectura de desarrollo basada en DevOps que se volvió el estándar del área.</li>
+                <li data-i18n="exp3b2">Lideré el equipo de desarrollo y la gestión de proyectos: unificación de plataformas de venta, migración del proveedor de facturación y el sitio de venta de paquetes de viaje.</li>
+                <li data-i18n="exp3b3">Apoyo técnico a negocio en decisiones de proyecto y selección de proveedores, además del soporte a sistemas legacy.</li>
+              </ul>
+            </div>
+          </article>
+          <article style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 0;border-top:1px solid var(--line)">
+            <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--dim)">2016 — 2018</p>
+            <div>
+              <h3 style="margin:0 0 4px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em">Famsa</h3>
+              <p style="margin:0 0 14px;font-size:14px;color:var(--dim)" data-i18n="exp4r">Analista y desarrollador en procesos de negocio · Monterrey</p>
+              <ul style="margin:0;padding-left:17px;display:grid;gap:9px;font-size:16px;line-height:1.6;color:var(--muted)">
+                <li data-i18n="exp4b1">Responsable del área de BPM: migración y automatización de procesos de negocio sobre IBM BPM.</li>
+                <li data-i18n="exp4b2">Diseñé e implementé una arquitectura basada en contenedores para los nuevos desarrollos.</li>
+              </ul>
+            </div>
+          </article>
+          <article style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 0;border-top:1px solid var(--line)">
+            <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--dim)">2014 — 2016</p>
+            <div>
+              <h3 style="margin:0 0 4px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em">Metalsa</h3>
+              <p style="margin:0 0 14px;font-size:14px;color:var(--dim)" data-i18n="exp5r">Desarrollador de software · Nuevo León</p>
+              <ul style="margin:0;padding-left:17px;display:grid;gap:9px;font-size:16px;line-height:1.6;color:var(--muted)">
+                <li data-i18n="exp5b1">Análisis, diseño e implementación del módulo de administración de componentes de chasis, de extremo a extremo.</li>
+                <li data-i18n="exp5b2">Migración de la plataforma de escritorio a web y soporte a los sistemas existentes.</li>
+              </ul>
+            </div>
+          </article>
+          <article style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 0;border-top:1px solid var(--line)">
+            <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--dim)">2013 — 2014</p>
+            <div>
+              <h3 style="margin:0 0 4px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em">Miracle Business Network</h3>
+              <p style="margin:0 0 14px;font-size:14px;color:var(--dim)" data-i18n="exp6r">Desarrollador de software (practicante) · Tlaxcala</p>
+              <ul style="margin:0;padding-left:17px;display:grid;gap:9px;font-size:16px;line-height:1.6;color:var(--muted)">
+                <li data-i18n="exp6b1">Levantamiento de requerimientos, casos de uso y diseño de la base de datos del módulo de evaluación de desempeño.</li>
+              </ul>
+            </div>
+          </article>
         </div>
-    </div>
+      </section>
 
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Resumen</h2>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-6">
-
-                    <h3 class="resume-title">Educación</h3>
-                    <div class="resume-item">
-                        <h4>Ingeniería en Computación</h4>
-                        <h5>2009 - 2013</h5>
-                        <p><em>Universidad Autónoma de Tlaxcala, Tlax.</em></p>
-                        <p>Mención honorifica en tesis profesional Visión Artificial Aplicada al Diagnóstico de Leucemia Granulocítica Crónica</p>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Técnico en Contabilidad</h4>
-                        <h5>2006 - 2009</h5>
-                        <p><em>Colegio de Bachilleres Tlaxcala Plantel 14, Tlax.</em></p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <h3 class="resume-title">Experiencia Profecional</h3>
-                    <div class="resume-item">
-                        <h4>Analista y Desarrollador de Software Senior</h4>
-                        <h5>2018 al presente</h5>
-                        <p><em>Grupo Estrella Roja - Puebla, Pue. </em></p>
-                        <ul>
-                            <li>Análisis, propuesta e implementación de nueva arquitectura de desarrollo basada en DevOps</li>
-                            <li>Levantamiento de requerimientos para nuevos proyectos</li>
-                            <li>Participación en reuniones para toma de decisiones, propuesta o validación de proyectos, selección de proveedores, apoyo técnico basado en la operación del negocio</li>
-                            <li>Soporte a sistemas legacy</li>
-                            <li>Planeación y gestión de proyectos</li>
-                            <li>Lider en equipo de desarrollo <a href="#" data-toggle="modal" data-target="#exampleModalCenter">(proyectos)</a></li>
-                        </ul>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Analista y Desarrollador en Procesos de Negocio</h4>
-                        <h5>2016 - 2018</h5>
-                        <p><em>Grupo Famsa - Monterrey, N. L.</em></p>
-                        <ul>
-                            <li>Líder en área de BPM</li>
-                            <li>Planeación y gestión de proyecto</li>
-                            <li>Levantamiento de requerimientos para nuevos proyectos</li>
-                            <li>Soporte a sistemas legacy ExtJs3</li>
-                            <li>Migración y automatización de procesos de negocio</li>
-                            <li>Análisis, propuesta e implementación de nueva arquitectura basada en contenedores</li>
-                        </ul>
-                    </div>
-                    <div class="resume-item" id="moreText">
-                        <h4> <a onclick="showOrHide()" >mas ...</a></h4>
-                    </div>
-                    <div id="moreInfo" style="display: none;">
-                        <div class="resume-item">
-                            <h4>Desarrollador de Software</h4>
-                            <h5>2014 - 2016</h5>
-                            <p><em>Metalsa - Monterrey, N. L</em></p>
-                            <ul>
-                                <li>Soporte en plataforma Desktop Java/QT.</li>
-                                <li>Soporte en plataforma Web ExtJs3</li>
-                                <li>Migración de plataforma Desktop a ExtJs5.</li>
-                                <li>Análisis, diseño y desarrollo de módulo para administración de componentes de chasis (Backend-Frontend)</li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4>Practicas Profesionales</h4>
-                            <h5>2014 - 2016</h5>
-                            <p><em>Miracle Business Network SA de CV - Tlaxcala, Tlax.</em></p>
-                            <ul>
-                                <li>Análisis de requerimiento y elaboración de casos de uso.</li>
-                                <li>Diseño de la base de datos.</li>
-                                <li>Construcción de formularios para la evaluación de desempeño con html y php.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="resume-item" style="display: none;" id="lessText">
-                        <h4> <a onclick="showOrHide()" >menos ...</a></h4>
-                    </div>
-                </div>
-            </div>
-
+      <section id="capacidades" data-reveal="1" style="padding:72px 0;border-bottom:1px solid var(--line)">
+        <h2 style="margin:0 0 34px;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--dim)" data-i18n="h2cap">03 / capacidades técnicas</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px">
+          <div style="border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--panel)">
+            <h3 style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:0.06em;color:var(--accent)">backend</h3>
+            <p style="margin:0;font-size:15px;line-height:1.75;color:var(--muted)">Java 8–21 · Spring Boot · Spring Framework · JPA / JPQL · APIs REST · microservicios · IBM BPM · Maven</p>
+          </div>
+          <div style="border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--panel)">
+            <h3 style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:0.06em;color:var(--accent)">devops / infra</h3>
+            <p style="margin:0;font-size:15px;line-height:1.75;color:var(--muted)">Docker · Kubernetes · Jenkins · GitLab CI · SonarQube · Nexus · Nginx · Graylog · Grafana · AWS (EC2, RDS, S3, CloudFront)</p>
+          </div>
+          <div style="border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--panel)">
+            <h3 style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:0.06em;color:var(--accent)" data-i18n="cap3">datos</h3>
+            <p style="margin:0;font-size:15px;line-height:1.75;color:var(--muted)" data-i18n="cap3v">Oracle · SQL Server · DB2 · MySQL · modelado relacional · migraciones de esquema</p>
+          </div>
+          <div style="border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--panel)">
+            <h3 style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:0.06em;color:var(--accent)">frontend</h3>
+            <p style="margin:0;font-size:15px;line-height:1.75;color:var(--muted)">Angular · TypeScript · JavaScript · Ionic · HTML / CSS · ExtJS (legacy)</p>
+          </div>
+          <div style="border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--panel)">
+            <h3 style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:0.06em;color:var(--accent)" data-i18n="cap5">ia aplicada</h3>
+            <p style="margin:0;font-size:15px;line-height:1.75;color:var(--muted)" data-i18n="cap5v">Visión artificial y reconocimiento de patrones aplicados a diagnóstico médico · procesamiento de imagen</p>
+          </div>
         </div>
-    </section><!-- End Resume Section -->
+      </section>
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Tecnologías</h2>
-                <p>Manejo de Docker, Java, Spring, BPM IBM, Angular Js, Angular 8-10, Typescript, Javascript, Ionic3, Gitlab, Jenkins, SonarQube, Nexus, Alfresco, Graylog, Grafana, Nginx, entre otras.</p>
+      <section id="educacion" data-reveal="1" style="padding:72px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,5vw,64px);align-items:start">
+        <div>
+          <h2 style="margin:0 0 34px;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--dim)" data-i18n="h2edu">04 / educación y reconocimientos</h2>
+          <div style="border-left:2px solid var(--accent);padding:2px 0 2px 20px;margin-bottom:30px">
+            <p style="margin:0 0 6px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent)" data-i18n="mencion">mención honorífica de tesis</p>
+            <h3 style="margin:0 0 10px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:21px;line-height:1.3;letter-spacing:-0.02em;text-wrap:balance" data-i18n="tesisT">Visión artificial aplicada al diagnóstico de leucemia granulocítica crónica</h3>
+            <p style="margin:0;font-size:15.5px;line-height:1.65;color:var(--muted);text-wrap:pretty" data-i18n="tesisP">Reconocimiento de patrones sobre imágenes de laboratorio para apoyar la identificación de la enfermedad. Presentado también como <em>Pattern Recognition Applied to Identification of Chronic Granulocytic Leukemia</em>.</p>
+          </div>
+          <div style="display:grid;gap:22px">
+            <div style="border-top:1px solid var(--line);padding-top:20px">
+              <h3 style="margin:0 0 4px;font-size:17px;font-weight:600">Ingeniería en Computación</h3>
+              <p style="margin:0;font-size:15px;color:var(--muted)" data-i18n="uatx">Universidad Autónoma de Tlaxcala · Sistemas Distribuidos · 2009–2013</p>
             </div>
-
-            <div class="row">
-                <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                    <ul id="portfolio-flters">
-                        <li data-filter="*" class="filter-active">Todas</li>
-                        <li data-filter=".filter-web">Desarrollo Web</li>
-                        <li data-filter=".filter-bd">Base de datos</li>
-                        <li data-filter=".filter-devops">CI/CD</li>
-                        <li data-filter=".filter-aws">AWS</li>
-                    </ul>
-                </div>
+            <div style="border-top:1px solid var(--line);padding-top:20px">
+              <h3 style="margin:0 0 4px;font-size:17px;font-weight:600" data-i18n="bach">Técnico en Contabilidad</h3>
+              <p style="margin:0;font-size:15px;color:var(--muted)">Colegio de Bachilleres de Tlaxcala, Plantel 14 · 2006–2009</p>
             </div>
-
-            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-lg-1 col-md-1 portfolio-item filter-web">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/java.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-web">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/angular.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-bd">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/oraclebd.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-devops">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/docker.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-bd">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/db2.jpg" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-devops">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/jenkins.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-bd">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/sqlserver.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-bd">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/mysqlbd.jpg" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-web">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/spring-framework.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-devops">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/sonarqube.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-web">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/springboot.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-devops">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/nginx.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-devops">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/grafana.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-web">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/maven.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-web">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/bootstrap.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-web">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/extjs.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-web">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/jquery.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-web">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/eclipse.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-web">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/intellij.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-devops">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/bpm.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-devops">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/gitlab.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-devops">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/graylog.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-devops">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/portainer.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-web">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/javascript-html5.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-web">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/jhipster.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-devops">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/git.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-devops">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/nexus.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-web">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/typescript.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-aws">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/ec2.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-aws">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/rds.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-aws">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/s3.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-aws">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/route53.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-aws">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/certificationmanager.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-1 col-md-1 portfolio-item filter-aws">
-                    <div class="portfolio-wrap" style="background-color: white;">
-                        <img src="assets/img/portfolio/cloudfront.png" width="100%" class="img-fluid" alt="">
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
-    </section><!-- End Portfolio Section -->
-
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Contacto</h2>
-            </div>
-
-            <div class="row">
-                <div class="info offset-1 col-md-4">
-                    <div>
-                        <i class="icofont-envelope"></i>
-                        <h4>Email:</h4>
-                        <p>santamariadiaze@gmail.com</p>
-                    </div>
-                </div>
-                <div class="info offset-1 col-md-4">
-                    <div>
-                        <i class="icofont-phone"></i>
-                        <h4>Teléfono:</h4>
-                        <p>+52 8122886263</p>
-                    </div>
-                </div>
-
-            </div>
-
-
+        <div>
+          <h2 style="margin:0 0 22px;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--dim)" data-i18n="h2cert">certificaciones</h2>
+          <ul style="margin:0;padding:0;list-style:none;display:grid;gap:0;font-size:15.5px">
+            <li style="border-top:1px solid var(--line);padding:14px 0;color:var(--muted)" data-i18n="cert1">Fundamentos de Java</li>
+            <li style="border-top:1px solid var(--line);padding:14px 0;color:var(--muted)">Spring Boot</li>
+            <li style="border-top:1px solid var(--line);padding:14px 0;color:var(--muted)" data-i18n="cert3">Microservicios con un café</li>
+            <li style="border-top:1px solid var(--line);padding:14px 0;color:var(--muted)" data-i18n="cert4">SCRUM con un café</li>
+            <li style="border-top:1px solid var(--line);padding:14px 0;color:var(--muted)" data-i18n="cert5">Big Data con un café</li>
+            <li style="border-top:1px solid var(--line);padding:14px 0;color:var(--muted)" data-i18n="cert6">Introducción a la terminal y línea de comandos</li>
+          </ul>
         </div>
-    </section><!-- End Contact Section -->
+      </section>
 
-</main><!-- End #main -->
-
-<!-- ======= Footer ======= -->
-<footer id="footer">
-    <div class="container">
-        <h3>Enrique Santamaría Díaz</h3>
-        <div class="social-links">
-            <a href="https://twitter.com/Blue_kike" class="twitter"><i class="bx bxl-twitter"></i></a>
-            <a href="https://web.facebook.com/BluE.KikE" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="https://www.instagram.com/sd_enrique/" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="javascript:void(0);" class="google-plus" data-toggle="tooltip" title="blue_kike"><i class="bx bxl-skype"></i></a>
-            <a href="https://www.linkedin.com/in/enriquesantamariadiaz/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      <section id="contacto" data-reveal="1" style="padding:80px 0 0">
+        <h2 style="margin:0 0 24px;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--dim)" data-i18n="h2cont">05 / contacto</h2>
+        <p style="margin:0 0 34px;max-width:52ch;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(26px,3.6vw,40px);line-height:1.15;letter-spacing:-0.03em;text-wrap:balance" data-i18n="contT">Si tienes un backend que necesita rescate o una plaza que encaje, escríbeme.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:13.5px">
+          <a href="mailto:santamariadiaze@gmail.com" style="padding:14px 24px;background:var(--accent);color:var(--accentInk);border-radius:3px;font-weight:500" class="h5">santamariadiaze@gmail.com</a>
+          <a href="https://www.linkedin.com/in/enriquesantamariadiaz/" rel="noopener" style="padding:14px 24px;border:1px solid var(--line2);border-radius:3px;color:var(--text)" class="h4">LinkedIn</a>
+          <a href="https://github.com/esdiaz" rel="noopener" style="padding:14px 24px;border:1px solid var(--line2);border-radius:3px;color:var(--text)" class="h4">GitHub</a>
+          <a href="assets/cv-enrique-santamaria.pdf" download="" style="padding:14px 24px;border:1px solid var(--line2);border-radius:3px;color:var(--text)" class="h4" data-i18n="cvBtn">descargar CV (PDF)</a>
         </div>
-        <div class="copyright">
-            &copy; Copyright <strong><span>ediaz</span></strong>. All Rights Reserved
-        </div>
+      </section>
 
     </div>
-</footer><!-- End Footer -->
+  </main>
 
-<a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
-<div id="preloader"></div>
+  <footer style="border-top:1px solid var(--line)">
+    <div style="max-width:1120px;margin:0 auto;padding:26px 28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--dim)">
+      <span>© 2026 Enrique Santamaría Díaz</span>
+      <span data-i18n="footerR">Tlaxcala, México · sitio estático en GitHub Pages</span>
+    </div>
+  </footer>
 
-<!-- Vendor JS Files -->
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-<script src="assets/vendor/counterup/counterup.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/venobox/venobox.min.js"></script>
-<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-<script src="assets/vendor/typed.js/typed.min.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-
-<!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
-
+</div>
+<script src="assets/js/main.js" defer></script>
 </body>
-
 </html>
