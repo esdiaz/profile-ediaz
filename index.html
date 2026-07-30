@@ -27,16 +27,20 @@
 <body>
 <div style="background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',system-ui,sans-serif;min-height:100vh">
 
+  <div id="progress"></div>
+
   <a href="#main" style="position:absolute;left:-9999px;top:0;padding:10px 16px;background:var(--accent);color:var(--accentInk);font-size:14px" class="h1" data-i18n="skip">Ir al contenido</a>
 
   <header style="position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)">
     <div style="max-width:1120px;margin:0 auto;padding:14px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px">
-      <a href="#top" style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--text);letter-spacing:0.02em">esdiaz</a>
+      <a href="#top" class="brand" style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--text);letter-spacing:0.02em"><span class="mark" aria-hidden="true"></span>esdiaz</a>
       <nav aria-label="Secciones" style="display:flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:12.5px">
-        <a href="#sobre" style="padding:8px 11px;border-radius:3px;color:var(--muted)" class="h2" data-i18n="nav1">sobre</a>
-        <a href="#experiencia" style="padding:8px 11px;border-radius:3px;color:var(--muted)" class="h2" data-i18n="nav2">experiencia</a>
-        <a href="#capacidades" style="padding:8px 11px;border-radius:3px;color:var(--muted)" class="h2" data-i18n="nav3">capacidades</a>
-        <a href="#contacto" style="padding:8px 11px;border-radius:3px;color:var(--muted)" class="h2" data-i18n="nav4">contacto</a>
+        <span class="nav-sections" style="display:flex;align-items:center;gap:6px">
+          <a href="#sobre" style="padding:8px 11px;border-radius:3px;color:var(--muted)" class="h2 nav-link" data-i18n="nav1">sobre</a>
+          <a href="#experiencia" style="padding:8px 11px;border-radius:3px;color:var(--muted)" class="h2 nav-link" data-i18n="nav2">experiencia</a>
+          <a href="#capacidades" style="padding:8px 11px;border-radius:3px;color:var(--muted)" class="h2 nav-link" data-i18n="nav3">capacidades</a>
+          <a href="#contacto" style="padding:8px 11px;border-radius:3px;color:var(--muted)" class="h2 nav-link" data-i18n="nav4">contacto</a>
+        </span>
         <span style="display:flex;gap:6px;margin-left:10px">
           <button type="button" id="langBtn" aria-label="Cambiar idioma / Switch language" style="font-family:'IBM Plex Mono',monospace;font-size:12px;padding:7px 10px;background:transparent;border:1px solid var(--line2);border-radius:3px;color:var(--accent);cursor:pointer;min-width:38px" class="h3">EN</button>
           <button type="button" id="themeBtn" aria-label="Cambiar tema / Switch theme" style="font-family:'IBM Plex Mono',monospace;font-size:12px;padding:7px 10px;background:transparent;border:1px solid var(--line2);border-radius:3px;color:var(--muted);cursor:pointer;min-width:38px" class="h4">☀</button>
@@ -49,6 +53,7 @@
     <div id="top" style="max-width:1120px;margin:0 auto;padding:0 28px 104px">
 
       <section style="padding:clamp(64px,11vw,124px) 0 88px;border-bottom:1px solid var(--line)">
+        <div style="margin:0 0 24px"><span class="avail"><span class="dot" aria-hidden="true"></span><span data-i18n="avail">abierto a nuevas oportunidades</span></span></div>
         <p style="margin:0 0 28px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.04em;color:var(--accent)" data-i18n="kicker">— desarrollador backend senior · java / spring · 12 años</p>
         <h1 style="margin:0;max-width:900px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(38px,6vw,74px);line-height:1.05;letter-spacing:-0.035em;text-wrap:balance">Enrique Santamaría Díaz</h1>
         <p style="margin:26px 0 0;max-width:64ch;font-size:clamp(16.5px,2vw,18.5px);line-height:1.62;color:var(--muted);text-wrap:pretty" data-i18n="heroP1">Construyo y modernizo backends que ya están en producción: servicios en Java y Spring Boot, migración de sistemas legacy y la automatización de los procesos que sostienen la operación de un negocio.</p>
@@ -89,7 +94,7 @@
       <section id="experiencia" data-reveal="1" style="padding:72px 0;border-bottom:1px solid var(--line)">
         <h2 style="margin:0 0 34px;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--dim)" data-i18n="h2exp">02 / experiencia</h2>
         <div style="display:grid">
-          <article style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 0;border-top:1px solid var(--line)">
+          <article class="xp" style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 16px;margin:0 -16px;border-top:1px solid var(--line);border-radius:6px">
             <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent)" data-i18n="exp1d">2023 → hoy</p>
             <div>
               <h3 style="margin:0 0 4px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em">Hey Banco</h3>
@@ -101,7 +106,7 @@
               </ul>
             </div>
           </article>
-          <article style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 0;border-top:1px solid var(--line)">
+          <article class="xp" style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 16px;margin:0 -16px;border-top:1px solid var(--line);border-radius:6px">
             <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--dim)">2022 — 2023</p>
             <div>
               <h3 style="margin:0 0 4px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em">Office Depot México</h3>
@@ -112,7 +117,7 @@
               </ul>
             </div>
           </article>
-          <article style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 0;border-top:1px solid var(--line)">
+          <article class="xp" style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 16px;margin:0 -16px;border-top:1px solid var(--line);border-radius:6px">
             <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--dim)">2018 — 2022</p>
             <div>
               <h3 style="margin:0 0 4px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em">Grupo Estrella Roja</h3>
@@ -124,7 +129,7 @@
               </ul>
             </div>
           </article>
-          <article style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 0;border-top:1px solid var(--line)">
+          <article class="xp" style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 16px;margin:0 -16px;border-top:1px solid var(--line);border-radius:6px">
             <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--dim)">2016 — 2018</p>
             <div>
               <h3 style="margin:0 0 4px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em">Famsa</h3>
@@ -135,7 +140,7 @@
               </ul>
             </div>
           </article>
-          <article style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 0;border-top:1px solid var(--line)">
+          <article class="xp" style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 16px;margin:0 -16px;border-top:1px solid var(--line);border-radius:6px">
             <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--dim)">2014 — 2016</p>
             <div>
               <h3 style="margin:0 0 4px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em">Metalsa</h3>
@@ -146,7 +151,7 @@
               </ul>
             </div>
           </article>
-          <article style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 0;border-top:1px solid var(--line)">
+          <article class="xp" style="display:grid;grid-template-columns:minmax(0,130px) minmax(0,1fr);gap:clamp(16px,3vw,36px);padding:28px 16px;margin:0 -16px;border-top:1px solid var(--line);border-radius:6px">
             <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--dim)">2013 — 2014</p>
             <div>
               <h3 style="margin:0 0 4px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em">Miracle Business Network</h3>
@@ -162,23 +167,23 @@
       <section id="capacidades" data-reveal="1" style="padding:72px 0;border-bottom:1px solid var(--line)">
         <h2 style="margin:0 0 34px;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--dim)" data-i18n="h2cap">03 / capacidades técnicas</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px">
-          <div style="border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--panel)">
+          <div class="card" style="border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--panel)">
             <h3 style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:0.06em;color:var(--accent)">backend</h3>
             <p style="margin:0;font-size:15px;line-height:1.75;color:var(--muted)">Java 8–21 · Spring Boot · Spring Framework · JPA / JPQL · APIs REST · microservicios · IBM BPM · Maven</p>
           </div>
-          <div style="border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--panel)">
+          <div class="card" style="border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--panel)">
             <h3 style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:0.06em;color:var(--accent)">devops / infra</h3>
             <p style="margin:0;font-size:15px;line-height:1.75;color:var(--muted)">Docker · Kubernetes · Jenkins · GitLab CI · SonarQube · Nexus · Nginx · Graylog · Grafana · AWS (EC2, RDS, S3, CloudFront)</p>
           </div>
-          <div style="border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--panel)">
+          <div class="card" style="border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--panel)">
             <h3 style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:0.06em;color:var(--accent)" data-i18n="cap3">datos</h3>
             <p style="margin:0;font-size:15px;line-height:1.75;color:var(--muted)" data-i18n="cap3v">Oracle · SQL Server · DB2 · MySQL · modelado relacional · migraciones de esquema</p>
           </div>
-          <div style="border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--panel)">
+          <div class="card" style="border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--panel)">
             <h3 style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:0.06em;color:var(--accent)">frontend</h3>
             <p style="margin:0;font-size:15px;line-height:1.75;color:var(--muted)">Angular · TypeScript · JavaScript · Ionic · HTML / CSS · ExtJS (legacy)</p>
           </div>
-          <div style="border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--panel)">
+          <div class="card" style="border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--panel)">
             <h3 style="margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:0.06em;color:var(--accent)" data-i18n="cap5">ia aplicada</h3>
             <p style="margin:0;font-size:15px;line-height:1.75;color:var(--muted)" data-i18n="cap5v">Visión artificial y reconocimiento de patrones aplicados a diagnóstico médico · procesamiento de imagen</p>
           </div>

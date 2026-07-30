@@ -45,7 +45,8 @@ const EN = {
   h2cont: "05 / contact",
   contT: "If you have a backend that needs rescuing, or a role that fits, get in touch.",
   cvBtn: "download CV (PDF)",
-  footerR: "Tlaxcala, Mexico · static site on GitHub Pages"
+  footerR: "Tlaxcala, Mexico · static site on GitHub Pages",
+  avail: "open to new opportunities"
 };
 
 (function () {
@@ -100,4 +101,24 @@ const EN = {
   } else {
     document.querySelectorAll('[data-reveal]').forEach(function (n) { n.classList.add('om-in'); });
   }
+
+  // Scroll progress bar
+  var bar = document.getElementById('progress');
+  // Scrollspy: highlight the nav link of the section in view
+  var links = [].slice.call(document.querySelectorAll('.nav-link'));
+  var sections = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  function onScroll() {
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - doc.clientHeight;
+    if (bar) bar.style.width = (max > 0 ? (doc.scrollTop / max) * 100 : 0) + '%';
+    var mark = doc.scrollTop + doc.clientHeight * 0.32;
+    var idx = -1;
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i] && sections[i].offsetTop <= mark) idx = i;
+    }
+    links.forEach(function (a, i) { a.classList.toggle('active', i === idx); });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
 })();
