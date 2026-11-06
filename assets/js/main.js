@@ -46,7 +46,10 @@ const EN = {
   contT: "If you have a backend that needs rescuing, or a role that fits, get in touch.",
   cvBtn: "download CV (PDF)",
   footerR: "Tlaxcala, Mexico · static site on GitHub Pages",
-  avail: "open to new opportunities"
+  avail: "open to new opportunities",
+  tagMicro: "microservices",
+  tagModelado: "relational modeling",
+  tagMigraciones: "schema migrations"
 };
 
 (function () {
